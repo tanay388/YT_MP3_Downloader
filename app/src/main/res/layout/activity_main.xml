@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <!--    Include the static header layout-->
+    <include layout="@layout/header" />
+
+    <!--    Content Container Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/outer_padding"
+        android:paddingVertical="@dimen/inner_padding">
+
+        <!--Paste YT Link input label-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_link_for_youtube"
+            style="@style/normal_text" />
+
+        <!--Paste YT Link input-->
+        <EditText
+            android:id="@+id/et_input_yt_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/inner_padding"
+            style="@style/input_text_style"
+            android:drawablePadding="@dimen/inner_padding"
+            android:hint="@string/input_link_for_youtube"
+            android:drawableLeft="@drawable/ic_link"
+            android:drawableRight="@drawable/frame_13"/>
+
+
+        <!--Select destination folder label-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/outer_padding"
+            android:text="@string/select_destination_text"
+            style="@style/normal_text" />
+
+        <!--Paste YT Link input-->
+        <TextView
+            android:id="@+id/tv_select_folder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/inner_padding"
+            style="@style/input_text_style"
+            android:gravity="center_vertical"
+            android:hint="@string/select_destination_text"
+            android:drawablePadding="@dimen/inner_padding"
+            android:drawableStart="@drawable/ic_directory" />
+
+        <!-- Mini info text about destination folder -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/inner_padding"
+            android:text="@string/info_select_destination_text"
+            android:drawablePadding="@dimen/inner_padding"
+            android:textSize="@dimen/small_text_size"
+            android:drawableStart="@drawable/ic_info_12"/>
+
+
+        <!-- Download Button -->
+        <Button
+            android:id="@+id/download_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/outer_padding"
+            android:text="@string/download_button_text"
+            style="@style/button_primary" />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

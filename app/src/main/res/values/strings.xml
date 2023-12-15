@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MP3 Downloader</string>
+
+    <string name="input_link_for_youtube">YouTube Link</string>
+    <string name="select_destination_text">Destination Folder</string>
+    <string name="info_select_destination_text">Where you want to save the MP3</string>
+    <string name="download_button_text">Download</string>
+    <string name="new_download_button_text">Download Another MP3</string>
+    <string name="grabbing_button_text">Grabbing info...</string>
+    <string name="downloading_progress_text">Downloading...</string>
+    <string name="converting_progress_text">Converting...</string>
+    <string name="savinging_progress_text">Saving...</string>
+    <string name="saved_progress_text">Success</string>
+    <string name="failed_type">Failed</string>
+    <string name="error_text">Please check your internet connection</string>
+    <string name="success_text">MP3 successfully saved into selected folder</string>
+</resources>

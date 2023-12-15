@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // Dimension of different file heights
+    <dimen name="logo_height">24dp</dimen>
+    <dimen name="header_height">82dp</dimen>
+
+    //Paddings and margins
+    <dimen name="outer_padding">16dp</dimen>
+    <dimen name="inner_padding">8dp</dimen>
+
+    //Text Sizes
+    <dimen name="h1_size">20sp</dimen>
+    <dimen name="normal_text_size">14sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+
+    // Card corner radius's
+    <dimen name="edit_text_corner_radius">8dp</dimen>
+</resources>

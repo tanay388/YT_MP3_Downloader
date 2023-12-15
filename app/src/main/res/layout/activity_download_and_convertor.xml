@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.DownloadAndConvertorActivity">
+
+    <include
+        android:id="@+id/header_view"
+        layout="@layout/header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/outer_padding"
+        app:layout_constraintTop_toBottomOf="@id/header_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <!-- Video information container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/background_rounded_box"
+            android:padding="@dimen/outer_padding">
+
+
+            <!-- Thumbnail Image -->
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/background_rounded_box"
+                android:maxHeight="360dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/loading" />
+
+            <!--  Video Title -->
+            <TextView
+                android:id="@+id/tv_video_title"
+                android:layout_marginTop="@dimen/inner_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/normal_text"
+                android:maxLines="2"
+                android:text=" A random title for the video"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_view_count"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/inner_padding"
+                    android:text="1.34K Views"
+                    android:drawablePadding="@dimen/inner_padding"
+                    android:textSize="@dimen/small_text_size"
+                    android:drawableStart="@drawable/ic_view" />
+                <TextView
+                    android:id="@+id/tv_like_count"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/inner_padding"
+                    android:text="1.34K Likes"
+                    android:drawablePadding="@dimen/inner_padding"
+                    android:textSize="@dimen/small_text_size"
+                    android:drawableStart="@drawable/ic_like" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/outer_padding"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvProgressTypeIndicator"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/downloading_progress_text"
+                    style="@style/normal_text" />
+
+
+                <TextView
+                    android:id="@+id/tv_progress_update"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/downloading_progress_text"
+                    android:textAlignment="textEnd" />
+
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressbar_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inner_padding"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressDrawable="@drawable/progress_background"
+                />
+            <!-- Mini info text about destination folder -->
+            <TextView
+                android:id="@+id/tvInfoDisplay"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inner_padding"
+                android:text="@string/info_select_destination_text"
+                android:drawablePadding="@dimen/inner_padding"
+                android:textSize="@dimen/small_text_size"
+                android:drawableStart="@drawable/ic_info_12"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/buttonNewDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/outer_padding"
+        android:layout_margin="@dimen/outer_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/new_download_button_text"
+        style="@style/button_primary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
